@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Canastrão Queijos - Harmonização
+    </title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla|Stoke">
+
+    <base target="_blank">
+</head>
+
+<body>
+    <header>
+        <img class="imgLogo" src="../imagens/CanastraoLogoTopo.png" alt="logo_topo">
+
+        <address class="ender">
+            <p>Av. Gorgonzola, 235</p>
+            <p>Tel: (21)91235-1235</p>
+            <p><a href="mailto:contato@canastrao.com.br"> contato@canastrao.com.br </a></p>
+        </address>
+    </header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="../paginas/CanastraoQueijos.html"> Apresentação </a></li>
+            <li><a href="../paginas/Queijos.html"> Queijos </a></li>
+            <li><a href="../paginas/Harmonizacao.html"> Harmonização </a></li>
+            <li><a href="../paginas/Pedidos.html"> Pedidos </a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h3 class="titulo">Harmonização de Queijos e Vinhos</h3>
+
+        <div class="listaQueijo">
+            <h4 class="procedencia">Queijos Nacionais:</h4>
+            <ul>
+                <li>
+                    <dl>
+                        <dt><a href="#" onclick="abrirModal('Canastra'); return false;">Canastra</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt><a href="#" onclick="abrirModal('Minas'); return false;">Minas</a></dt>
+                    </dl>
+                </li>
+            </ul>
+            <h4 class="procedencia">Queijos Internacionais:</h4>
+            <ul>
+                <li>
+                    <dl>
+                        <dt><a href="#" onclick="abrirModal('Gorgonzola'); return false;">Gorgonzola</a></dt>
+                    </dl>
+                </li>
+            </ul>
+
+        </div>
+
+        <div id="fundoModal" onclick="fecharModal()"></div>
+
+        <div id="janelaModal">
+            <h4 id="modalTitulo">Título do Queijo</h4>
+            <img id="modalImagem" src="" alt="" style="max-width: 200px;">
+            <p id="modalDescricao" class="janDesc"></p>
+            <button onclick="fecharModal()">Fechar</button>
+        </div>
+
+
+    </section>
+
+    <script src="../js/harmonizacao.js"></script>
+
+</body>
+
+</html>

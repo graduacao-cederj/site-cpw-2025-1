@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Canastrão Queijos - Pedidos
+    </title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla|Stoke">
+
+    <base target="_blank">
+</head>
+
+<body>
+    <header>
+        <img class="imgLogo" src="../imagens/CanastraoLogoTopo.png" alt="logo_topo">
+
+        <address class="ender">
+            <p>Av. Gorgonzola, 235</p>
+            <p>Tel: (21)91235-1235</p>
+            <p><a href="mailto:contato@canastrao.com.br"> contato@canastrao.com.br </a></p>
+        </address>
+    </header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="../paginas/CanastraoQueijos.html"> Apresentação </a></li>
+            <li><a href="../paginas/Queijos.html"> Queijos </a></li>
+            <li><a href="../paginas/Harmonizacao.html"> Harmonização </a></li>
+            <li><a href="../paginas/Pedidos.html"> Pedidos </a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="divCompras">
+            <h3>Compras</h3>
+            <form method="POST">
+                <fieldset class="fsEsq">
+                    <legend>Identificação</legend>
+                    <div class="divLinha">
+                        <label class="colPri" for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" class="inpGrande">
+                    </div>
+                    <div class="divLinha">
+                        <label class="colPri" for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" class="inpGrande">
+                    </div>
+                    <div class="divLinha">
+                        <label class="colPri" for="endereco">Endereço:</label>
+                        <textarea id="endereco" name="endereco" class="inpEnder"></textarea>
+
+                        <fieldset class="fsDir">
+                            <legend>Gênero</legend>
+                            <input type="radio" checked id="mas" name="genero" value="masculino">
+                            <label for="mas">Mas</label>
+                            <input type="radio" id="fem" name="genero" value="feminino">
+                            <label for="fem">Fem</label>
+                            <input type="radio" id="outro" name="genero" value="outro">
+                            <label for="outro">Outro</label>
+                        </fieldset>
+                    </div>
+
+                    <fieldset class="fsDir">
+                        <legend>Nascimento:</legend>
+                        <div class="elemDir">
+                            <input type="number" id="dia" name="dia" class="numDD" min="1" max="31"> /
+                            <input type="number" id="mes" name="mes" class="numDD" min="1" max="12"> /
+                            <input type="number" id="ano" name="ano" class="numQD" min="1900" max="2025">
+                        </div>
+                    </fieldset>
+                    <div class="elemEsq">
+                        <label class="colPri" for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" name="telefone" class="inpTelef">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="elemEsq">
+                        <label class="colPri" for="celular">Celular:</label>
+                        <input type="text" id="celular" name="celular" class="inpTelef">
+                    </div>
+                </fieldset>
+
+                <fieldset class="fsEsq">
+                    <legend>Seleção de Produtos e Pagamento</legend>
+
+                    <div class="elemDir">
+                        <textarea name="listaCompras" id="listaCompras" class="listaCompras" readonly></textarea>
+                    </div>
+
+                    <div class="colLabSelProd">
+                        <div class="linhaProdSel">
+                            <div class="colPriCompras">
+                                <select name="produto">
+                                    <option>-----</option>
+                                    <optgroup label="Nacional">
+                                        <option>Canastra (500g)</option>
+                                        <option>Queijo Minas (400g)</option>
+                                        <option>Queijo Coalho (500g)</option>
+                                    </optgroup>
+                                    <optgroup label="Internacional">
+                                        <option>Gorgonzola (200g)</option>
+                                        <option>Queijo Brie (200g)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="elemDir">
+                                <button type="button" onclick="incluirProduto()">Incluir</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colPriPag">
+                        <fieldset class="fsEsq">
+                            <legend>Cartão</legend>
+                            <div class="colLabCrd">
+                                <label>Bandeira:</label>
+                                <input type="radio" checked id="visa" name="bandeira" value="visa">
+                                <label for="visa">Visa</label>
+                                <input type="radio" id="master" name="bandeira" value="master">
+                                <label for="master">Master</label>
+                                <input type="radio" id="elo" name="bandeira" value="elo">
+                                <label for="elo">Elo</label>
+                            </div>
+
+                            <div class="colLabCrd">
+                                <label>Validade:</label>
+                                <input type="number" name="mes_validade" class="numDD" min="1" max="12"> /
+                                <input type="number" name="ano_validade" class="numQD" min="2020" max="2040">
+                            </div>
+
+                            <div class="colLabCrd">
+                                <label for="numero_cartao">Número:</label>
+                                <input type="text" id="numero_cartao" name="numero_cartao" class="inpNCC">
+                            </div>
+                        </fieldset>
+                        <div class="colLabCrd">
+                            <label for="cpf">CPF:</label>
+                            <input type="text" id="cpf" name="cpf" class="inpNCC" onchange="validaCPF()">
+                        </div>
+
+                    </div>
+                    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                    <div class="elemDir">
+                        <label for="valor">Valor R$</label>
+                        <input type="text" id="valor" name="valor" class="inpMedio" readonly>
+
+                    </div>
+                </fieldset>
+
+                <div class="botoes">
+                    <button type="submit">Comprar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+
+        </div>
+
+    </section>
+    <script src="../js/cpf.js"></script>
+    <script src="../js/pedidos.js"></script>
+
+</body>
+
+</html>

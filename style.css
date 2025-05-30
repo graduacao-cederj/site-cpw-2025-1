@@ -1,0 +1,350 @@
+header {
+    display: block;
+    margin-bottom: 1px;
+}
+
+nav {
+    display: block;
+    width: 20%;
+    float: left;
+}
+
+section {
+    display: block;
+    width: 70%;
+    float: right;
+}
+
+/* Essa parte é para evitar sobreposição do nav e do section com o header */
+header::after,
+section::after,
+nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+body {
+    background-color: #EEDDAA;
+    color: #3366BB;
+    font-family: Stoke, Lucida Bright, Liberation;
+    font-size: 16px;
+}
+
+a {
+    color: #2255AA;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #2255CC;
+}
+
+ol {
+    line-height: 200%;
+}
+
+ul {
+    line-height: 200%;
+}
+
+.ender {
+    float: right;
+    text-align: right;
+    line-height: 140%;
+    font-family: Karla, Verdana, Ubuntu;
+    font-size: 14px;
+}
+
+img.imgLogo {
+    float: left;
+    border-bottom: 4px solid #3366BB;
+    margin-bottom: 6px;
+    padding-bottom: 15px;
+}
+
+div.apres {
+    text-align: center;
+    font-size: 16px;
+}
+
+nav ul {
+    color: #3366BB;
+    line-height: 230%;
+    margin-top: 40px;
+    list-style-type: disc;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.listaQueijo {
+    width: 440px;
+    color: #3366BB;
+    background-color: #FFFFBB;
+    padding: 10px;
+    border: 2px solid #3366BB;
+    margin: 0 auto 10px auto;
+}
+
+.listaQueijo ul {
+    list-style-type: disc;
+    font-size: 14px;
+    color: #3366BB;
+}
+
+.procedencia {
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+.tabQueijo {
+    border-collapse: collapse;
+    margin-top: 6px;
+    font-size: 15px;
+    background-color: #FFFFBB;
+    color: #114499;
+    font-family: Karla, Verdana, Ubuntu;
+}
+
+.tabQueijo th,
+.tabQueijo td {
+    border: 2px solid #000000;
+    padding: 6px 12px 6px 12px;
+}
+
+.linTH {
+    color: #EEEE00;
+    background-color: #887733;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.colTH {
+    color: #222222;
+    background-color: #CCBB88;
+    text-align: left;
+}
+
+.linhaPreco {
+    margin-top: 2px;
+}
+
+.preco {
+    color: #CC0000
+}
+
+.imgQueijo {
+    width: 120px;
+    height: auto;
+}
+
+.menuTab {
+    height: 45px;
+}
+
+#celulaDescricao {
+    text-align: center;
+    padding: 10px;
+}
+
+#conteudoDescricao {
+    /* para o conteúdo da descrição não aparecer até clicar */
+    display: none;
+}
+
+#conteudoDescricao>* {
+    /* para espaçamento entre os elementos */
+    margin-top: 8px;
+}
+
+#conteudoDescricao>*:first-child {
+    /* sem espaçamento no primeiro elemento */
+    margin-top: 0;
+}
+
+
+.nomeQueijo {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.pesoQueijo {
+    margin-top: 6px;
+}
+
+
+/* Formulário */
+.divCompras {
+    width: 550px;
+    color: #2255AA;
+    background-color: #FFFFBB;
+    padding: 6px 6px 15px 6px;
+    font-size: 12px;
+    margin: 20px auto;
+    border: 2px solid #000000;
+}
+
+/* Elementos dentro do formulário */
+.listaCompras {
+    width: 210px;
+    height: 160px;
+    float: right;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.colLabSelProd {
+    width: 230px;
+    height: 40px;
+    float: left;
+}
+
+.colSelProd {
+    width: 160px;
+    float: right;
+}
+
+.linhaProdSel {
+    width: 220px;
+    float: left;
+    margin-bottom: 6px;
+}
+
+.elemEsq {
+    display: block;
+    float: left;
+}
+
+.elemDir {
+    display: block;
+    float: right;
+}
+
+.botoes {
+    text-align: right;
+    margin: 20px 10px 0px 10px;
+}
+
+/* Fieldsets */
+.fsEsq {
+    float: left;
+    display: inline;
+    margin: 0px;
+}
+
+.fsDir {
+    float: right;
+    display: inline;
+    margin: 0px;
+}
+
+/* Tamanho dos inputs */
+.inpGrande {
+    width: 380px;
+}
+
+.inpMedio {
+    width: 80px;
+}
+
+.inpNCC {
+    width: 130px;
+}
+
+.inpTelef {
+    width: 90px;
+}
+
+.inpEnder {
+    width: 180px;
+    height: 50px;
+}
+
+.numDD {
+    width: 30px;
+}
+
+.numQD {
+    width: 50px;
+}
+
+/* Posicionamento de colunas e labels */
+.divLinha {
+    width: 500px;
+    margin-bottom: 6px;
+}
+
+.colLabCrd {
+    width: 260px;
+    height: 40px;
+    float: left;
+}
+
+.colPri {
+    display: block;
+    float: left;
+    width: 90px;
+}
+
+.colPriCompras {
+    display: block;
+    float: left;
+    width: 86px;
+}
+
+.colPriPag {
+    display: block;
+    float: left;
+    width: 250px;
+}
+
+.janQueijos {
+    text-align: center;
+    font-size: 14px;
+    color: #3366BB;
+    background-color: #FFFFBB;
+    padding: 10px;
+    border: 2px solid #3366BB;
+    margin: 0 auto 10px auto;
+}
+
+.janDesc {
+    text-align: left;
+}
+
+#janelaModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+    background-color: #FFFFBB;
+    border: 2px solid #3366BB;
+    padding: 10px;
+    color: #3366BB;
+    font-size: 14px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Fundo escurecido atrás da modal */
+#fundoModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9998;
+}

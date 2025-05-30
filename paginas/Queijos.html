@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Canastrão Queijos - Queijos
+    </title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla|Stoke">
+
+    <base target="_blank">
+</head>
+
+<body>
+    <header>
+        <img class="imgLogo" src="../imagens/CanastraoLogoTopo.png" alt="logo_topo">
+
+        <address class="ender">
+            <p>Av. Gorgonzola, 235</p>
+            <p>Tel: (21)91235-1235</p>
+            <p><a href="mailto:contato@canastrao.com.br"> contato@canastrao.com.br </a></p>
+        </address>
+    </header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="../paginas/CanastraoQueijos.html"> Apresentação </a></li>
+            <li><a href="../paginas/Queijos.html"> Queijos </a></li>
+            <li><a href="../paginas/Harmonizacao.html"> Harmonização </a></li>
+            <li><a href="../paginas/Pedidos.html"> Pedidos </a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <table class="tabQueijo">
+            <!-- Título da tabela -->
+            <tr>
+                <th class="linTH">Procedência</th>
+                <th class="linTH">Tipo</th>
+                <th class="linTH">Descrição</th>
+            </tr>
+
+            <!-- Queijos Nacionais -->
+            <tr>
+                <td rowspan="3" class="colTH">Nacional</td>
+                <td class="menuTab">
+                    <a href="#" onclick="mostrarQueijo('Canastra'); return false;">Canastra</a>
+                </td>
+                <td rowspan="5" id="celulaDescricao" class="celulaDescricao">
+                    <div id="conteudoDescricao">
+                        <div id="NomeDes" class="nomeQueijo"></div>
+                        <div><img id="ImgDes" src="../imagens/Vazio_150.png" alt="Imagem do queijo" class="imgQueijo">
+                        </div>
+                        <div id="PesoDes" class="pesoQueijo"></div>
+                        <div class="linhaPreco">
+                            Preço: R$ <span id="PrecoDes" class="preco"></span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="menuTab">
+                    <a href="#" onclick="mostrarQueijo('Minas'); return false;">Minas</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="menuTab">
+                    <a href="#" onclick="mostrarQueijo('Coalho'); return false;">Coalho</a>
+                </td>
+            </tr>
+
+            <!-- Queijos Internacionais -->
+            <tr>
+                <td rowspan="2" class="colTH">Internacional</td>
+                <td class="menuTab">
+                    <a href="#" onclick="mostrarQueijo('Gorgonzola'); return false;">Gorgonzola</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="menuTab">
+                    <a href="#" onclick="mostrarQueijo('Brie'); return false;">Brie</a>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+
+    <script src="../js/queijos.js"></script>
+
+
+</body>
+
+</html>
